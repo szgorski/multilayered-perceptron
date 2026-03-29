@@ -73,14 +73,19 @@ if __name__ == '__main__':
     train_in, train_out = read_classification('data_classification/data.circles.train.500.csv')
     test_in, test_out = read_classification('data_classification/data.circles.test.500.csv')
 
-    # train_in, train_out = read_regression('data_regression/data.activation.train.100.csv')
-    # test_in, test_out = read_regression('data_regression/data.activation.test.100.csv')
-    # train_in, train_out, test_in, test_out = normalize_regression(train_in, train_out, test_in, test_out)
-
     model = peek(train_in, train_out, test_in, test_out)
 
     plot_classification(train_in, train_out, test_in, test_out, model)
-    # plot_regression(train_in, train_out, test_in, test_out, model)
 
     # show_network()
 
+# if __name__ == '__main__':
+#     train_in, train_out = read_regression('data_regression/data.activation.train.100.csv')
+#     test_in, test_out = read_regression('data_regression/data.activation.test.100.csv')
+#     train_in, train_out, test_in, test_out = normalize_regression(train_in, train_out, test_in, test_out)
+
+#     model = peek(train_in, train_out, test_in, test_out)
+
+#     plot_regression(train_in, train_out, test_in, test_out, model)
+
+#     # show_network()
